@@ -1,29 +1,31 @@
 #pragma once
+#include <vector>
+
 
 class resistor {
 public:
 
     float R;
-    float *sopr = new float[n];//массив сопр
+    std::vector<float> V;
     int n;
-    std::vector<float> v1;
+    resistor() {};
+    resistor(const std::vector<float> &v1) {
+        n = v1.size();
 
-    resistor(v1);
-    ~resistor() {};
-    virtual void resist();
-    virtual void print();
+        for (int i = 0; i < n; i++) {
+            V.push_back(v1[i]);
+        };
+    }
+    
+    virtual void resist() {};
+    virtual void print() {};
     void printresult();
 
-    
+
 };
 
-resistor::resistor(v1){
-    n = v1.size();
-    for (int i = 0; i < n; i++) {
-        sopr[i] = v1[i];
-    };
-}
+
 
 void resistor::printresult() {
-    std::cout << R;
+    std::cout << R; 
 };
