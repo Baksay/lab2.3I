@@ -3,7 +3,6 @@
 class posled : public resistor {
     void resist() override;
     void print() override;
-
 };
 
 void posled::resist() {

@@ -1,7 +1,6 @@
 #pragma once
 
 class paralell : public resistor {
-
 public:
     void resist() override;
     void print() override;
